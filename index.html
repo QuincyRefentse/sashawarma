@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA Shawarma | Authentic Middle Eastern Cuisine</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/theme.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/images/shawarma.PNG" alt="SA Shawarma Logo">
+                <div>
+                    <span class="logo-main">SA SHAWARMA</span>
+                    <span class="logo-sub">Pretoria CBD</span>
+                </div>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <button class="btn btn-primary" id="orderNowBtn">Order Now</button>
+            </div>
+            
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+            
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu"><i class="fas fa-times"></i></button>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="btn btn-primary">Order Now</button>
+    </div>
+
+
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Signature Shawarmas</h2>
+            <p class="section-subtitle">Handcrafted with authentic spices and fresh ingredients</p>
+            
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="chicken">Chicken</button>
+                <button class="filter-btn" data-category="beef">Beef</button>
+                <button class="filter-btn" data-category="lamb">Lamb</button>
+                <button class="filter-btn" data-category="vegetarian">Vegetarian</button>
+            </div>
+            
+            <div class="menu-items" id="menuItems">
+                <!-- Menu items will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Authentic Middle Eastern Shawarma</h1>
+                <p>Freshly prepared with premium ingredients, served with love at the heart of Pretoria CBD</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-large" id="viewMenuBtn">View Menu</button>
+                    <button class="btn btn-secondary btn-large" id="orderOnlineBtn">Order Online</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/shawarma1.jpg" alt="Delicious Shawarma">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Order Modal -->
+    <div class="modal" id="orderModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Your Order</h2>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div class="cart-summary">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">R 0.00</span>
+                </div>
+                <div class="cart-actions">
+                    <button class="btn btn-secondary" id="clearCart">Clear Cart</button>
+                    <button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About SA Shawarma</h2>
+                <p>Located at the corner of Bosman & Church Street in Pretoria CBD, SA Shawarma has been serving authentic Middle Eastern cuisine since 2010. Our secret family recipes have been passed down through generations.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Fresh Ingredients</h3>
+                        <p>Daily prepared vegetables and premium meats</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <h3>Quick Service</h3>
+                        <p>Ready in minutes, perfect for lunch breaks</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <h3>Award Winning</h3>
+                        <p>Best Shawarma in Pretoria 2022, 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="assets/images/restaurant.jpg" alt="SA Shawarma Restaurant">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2 class="section-title">Visit Us Today</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Cnr Bosman & Church Street<br>Pretoria CBD, 0001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Monday - Saturday: 9:00 AM - 10:00 PM<br>Sunday: 10:00 AM - 8:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+27 12 345 6789</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>orders@sashawarma.co.za</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-map">
+                <div class="map-placeholder">
+                    <h3>Find Us Here</h3>
+                    <p>Cnr Bosman & Church Street, Pretoria CBD</p>
+                    <div class="map-image">
+                        <!-- In production, replace with Google Maps embed -->
+                        <img src="https://via.placeholder.com/400x300?text=Google+Maps+Location" alt="Map Location">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="SA
+                     Shawarma">
+                    <h3>SA SHAWARMA</h3>
+                    <p>Authentic Middle Eastern Cuisine</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p>&copy; 2024 SA Shawarma. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
